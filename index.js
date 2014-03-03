@@ -20,8 +20,6 @@ function createPane(opts, ready) {
     target = 'generated-atom-panel://' + target
   }
 
-
-
   if (!cache[target]) {
     var PanelView = cache[target] = ScrollView.extend({
       content: function() {
