@@ -1,0 +1,32 @@
+{
+  "name": "atom-pane",
+  "description": "A lightweight wrapper for creating new panes within the Atom Editor",
+  "version": "0.0.0",
+  "main": "index.js",
+  "browser": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {},
+  "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hughsk/atom-pane"
+  },
+  "bugs": {
+    "url": "https://github.com/hughsk/atom-pane/issues"
+  },
+  "engines": {
+    "atom": "^0.60.0"
+  },
+  "homepage": "https://github.com/hughsk/atom-pane",
+  "keywords": [
+    "atom",
+    "pane",
+    "editor",
+    "text",
+    "window",
+    "split",
+    "tab"
+  ]
+}
