@@ -1,6 +1,6 @@
 {
   "name": "atom-pane",
-  "description": "A lightweight wrapper for creating new panes within the Atom Editor",
+  "description": "A lightweight wrapper for creating new panes within Atom",
   "version": "0.0.0",
   "main": "index.js",
   "browser": "index.js",
