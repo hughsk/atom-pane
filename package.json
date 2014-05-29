@@ -1,7 +1,7 @@
 {
   "name": "atom-pane",
   "description": "A lightweight wrapper for creating new panes within Atom",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "browser": "index.js",
   "dependencies": {},
