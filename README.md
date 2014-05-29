@@ -1,4 +1,4 @@
-# atom-pane [![Flattr this!](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=hughskennedy&url=http://github.com/hughsk/atom-pane&title=atom-pane&description=hughsk/atom-pane%20on%20GitHub&language=en_GB&tags=flattr,github,javascript&category=software)[![experimental](http://hughsk.github.io/stability-badges/dist/experimental.svg)](http://github.com/hughsk/stability-badges) #
+# atom-pane [![Flattr this!](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=hughskennedy&url=http://github.com/hughsk/atom-pane&title=atom-pane&description=hughsk/atom-pane%20on%20GitHub&language=en_GB&tags=flattr,github,javascript&category=software)[![stable](http://hughsk.github.io/stability-badges/dist/stable.svg)](http://github.com/hughsk/stability-badges) #
 
 A lightweight wrapper for creating new panes within [Atom](http://atom.io).
 
