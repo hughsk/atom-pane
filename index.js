@@ -1,16 +1,34 @@
 var ScrollView = require('atom').ScrollView
 var url        = require('url')
 var cache      = {}
+var uris
 
 module.exports = createPane
 
-function createPane(opts, ready) {
+function createPane(opts, ready, done) {
   if (typeof opts === 'function') {
-    callback = opts
+    done = ready
+    ready = opts
     opts = {}
   }
 
   opts = opts || {}
+  done = done || function(){}
+
+  if (!uris) {
+    uris = {}
+    atom.workspace.subscribe(
+      atom.workspace.getActivePane()
+    , 'item-removed'
+    , function(editor) {
+      var uri = editor.getTitle()
+      if (uris[uri]) {
+        var done = uris[uri]
+        delete uris[uri]
+        done(editor)
+      }
+    })
+  }
 
   var target = opts.uri
     ? opts.uri
@@ -44,6 +62,8 @@ function createPane(opts, ready) {
   } else {
     var PanelView = cache[target]
   }
+
+  uris[target] = done
 
   atom.workspace.open(target, {
       split: opts.split
