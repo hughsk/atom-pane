@@ -21,7 +21,7 @@ function createPane(opts, ready, done) {
       atom.workspace.getActivePane()
     , 'item-removed'
     , function(editor) {
-      var uri = editor.getTitle()
+      var uri = editor.targetURI
       if (uris[uri]) {
         var done = uris[uri]
         delete uris[uri]
