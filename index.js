@@ -1,4 +1,4 @@
-var ScrollView = require('atom').ScrollView
+var ScrollView = require('atom-space-pen-views').ScrollView
 var url        = require('url')
 var cache      = {}
 var uris
