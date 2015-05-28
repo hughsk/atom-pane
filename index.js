@@ -46,7 +46,7 @@ function createPane(opts, ready, done) {
     })
 
     cache[target] = PanelView
-    atom.workspace.registerOpener(function(uri) {
+    atom.workspace.addOpener(function(uri) {
       if (uri !== target) return
       var view = new PanelView
 
