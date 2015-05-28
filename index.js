@@ -66,7 +66,7 @@ function createPane(opts, ready, done) {
   atom.workspace.open(target, {
       split: opts.split
     , searchAllPanes: !!opts.searchAllPanes
-    , changeFocus: opts.changeFocus !== false
+    , activatePane: opts.changeFocus !== false
   }).done(function(node) {
     ready(null, node)
   })
