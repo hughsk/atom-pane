@@ -17,10 +17,8 @@ function createPane(opts, ready, done) {
 
   if (!uris) {
     uris = {}
-    atom.workspace.subscribe(
-      atom.workspace.getActivePane()
-    , 'item-removed'
-    , function(editor) {
+    atom.workspace.getActivePane().onDidRemoveItem(
+    function(editor) {
       var uri = editor.targetURI
       if (uris[uri]) {
         var done = uris[uri]
