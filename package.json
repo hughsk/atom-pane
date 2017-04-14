@@ -4,7 +4,9 @@
   "version": "1.0.1",
   "main": "index.js",
   "browser": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "atom-space-pen-views": "^2.0.3"
+  },
   "devDependencies": {},
   "scripts": {},
   "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://hughsk.io/)",

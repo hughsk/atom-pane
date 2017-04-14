@@ -1,4 +1,4 @@
-var ScrollView = require('atom').ScrollView
+var ScrollView = require('atom-space-pen-views').ScrollView
 var url        = require('url')
 var cache      = {}
 var uris
@@ -17,10 +17,8 @@ function createPane(opts, ready, done) {
 
   if (!uris) {
     uris = {}
-    atom.workspace.subscribe(
-      atom.workspace.getActivePane()
-    , 'item-removed'
-    , function(editor) {
+    atom.workspace.getActivePane().onDidRemoveItem(
+    function(editor) {
       var uri = editor.targetURI
       if (uris[uri]) {
         var done = uris[uri]
@@ -48,7 +46,7 @@ function createPane(opts, ready, done) {
     })
 
     cache[target] = PanelView
-    atom.workspace.registerOpener(function(uri) {
+    atom.workspace.addOpener(function(uri) {
       if (uri !== target) return
       var view = new PanelView
 
@@ -68,8 +66,8 @@ function createPane(opts, ready, done) {
   atom.workspace.open(target, {
       split: opts.split
     , searchAllPanes: !!opts.searchAllPanes
-    , changeFocus: opts.changeFocus !== false
-  }).done(function(node) {
+    , activatePane: opts.changeFocus !== false
+  }).then(function(node) {
     ready(null, node)
   })
 
